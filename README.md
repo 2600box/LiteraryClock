@@ -5,6 +5,14 @@ Jaap Meijers shared instructions to create a literary clock using an old Kindle 
 
 I wanted to make some changes to the scripts, and to the provided CSV files.
 
+# IMagick on MacOS
+
+`brew install pkg-config imagemagick`
+
+`pecl install imagick`
+
+`php -m | grep -i magic`
+
 # Scripts
 I've modified the quote_to_image file so that it first checks to see if an image already exists before creating it. This means that you can run the script against the provided image folder without worrying about overwriting the existing images there, and also makes the script run more efficiently, as it only does the more intensive work of guessing font sizes, fitting the quotes, and creating the images, if the image doesn't already exist. 
 
