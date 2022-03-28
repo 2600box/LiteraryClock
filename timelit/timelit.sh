@@ -5,7 +5,8 @@ test -f /mnt/us/timelit/clockisticking || exit
 
 
 # find the current minute of the day
-MinuteOTheDay="$(env TZ=CEST date -R +"%H%M")";
+#MinuteOTheDay="$(env TZ=CEST date -R +"%H%M")";
+MinuteOTheDay="$(date -R +"%H%M")";
 
 # check if there is at least one image for this minute 
 #lines="$(find /mnt/us/timelit/images/quote_$MinuteOTheDay* 2>/dev/null | wc -l)"
