@@ -49,8 +49,8 @@ function TurnQuoteIntoImage($time, $quote, $timestring, $title, $author) {
     global $font_path_bold;
     global $creditFont;
     //image dimensions
-    $width = 600;
-    $height = 800;
+    $width = 1072;
+    $height = 1448;
 
     //text margin
     $margin = 26;
