@@ -7,9 +7,12 @@ test -f /mnt/us/timelit/clockisticking || clockrunning=0
 
 if [ $clockrunning -eq 0 ]; then
 
-	/etc/init.d/powerd stop
-	/etc/init.d/framework stop
-	
+#	/etc/init.d/powerd stop
+#	/etc/init.d/framework stop
+stop powerd
+stop framework
+
+
 	eips -c  # clear display
 	#echo "Clock is not ticking. Lets wind it."
 	#eips "Clock is not ticking. Lets wind it."
@@ -31,7 +34,8 @@ else
 	# go to home screen
 	# echo "send 102">/proc/keypad
 
-	/etc/init.d/framework start
-	/etc/init.d/powerd start
-
+#	/etc/init.d/framework start
+#	/etc/init.d/powerd start
+start powerd
+start framework
 fi
